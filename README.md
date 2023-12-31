@@ -7,7 +7,7 @@
 <img width="1000" alt="Screenshot 2023-12-31 at 7 52 03 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/83d15ac9-52c7-41f1-9f82-d2fec5647882">
 
 
-#### Serverless Approach 2
+#### Serverless Approach
 
 Deploy a Highly Available Webserver solution using a mixture of Compute, Load Balancing and other services available from AWS. <br/>
 The Solution should be self-healing, fault-tolerant as much as possible, and must make use of server-less offerings from AWS for compute. <br/>
@@ -76,6 +76,10 @@ terraform apply -auto-approve
 The code above will apply the necessary configurations for features such as static website hosting, bucket policies, and blocking public access to your bucket, create CDN distribution. <br/>
 
 5. Below is cloudfront and api gateway url to access the website
+
+<img width="1000" alt="Screenshot 2023-12-31 at 8 41 59 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/3e8dd082-1f63-4e49-86ca-5c110383fb90">
+
+
 
 
   
