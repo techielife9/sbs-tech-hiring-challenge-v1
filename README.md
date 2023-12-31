@@ -22,29 +22,29 @@ Infra used:  <br/>
 Terraform Infrastructure as Code (IaC):
 I utilized Terraform, an IaC tool, to define and provision the AWS resources required for my static website hosting solution. This allows for version-controlled, repeatable infrastructure deployments.
 
-#### AWS S3 Bucket:
+#### AWS S3 Bucket
 Created an S3 bucket to store backend files and serve the static website files. This bucket is configured for website hosting, allowing for easy content delivery.
 
-####  CloudFront:
+####  CloudFront
 Used CloudFront to distribute the static website's content across a network of edge locations worldwide. This reduces latency and improves the load times for users in different geographical locations. There by making the website self healing, highly available and fault tolerant at all times.
 
-####  AWS Lambda:
+####  AWS Lambda
 Using the Lambda function to print the date and internal server IP address on the sbs worldcup image.
 
 #### API Gateway
 API Gateway is to invoke the lambda function
 
-####  Content Upload and Management:
+####  Content Upload and Management
 Provided instructions and scripts for uploading and managing my website content within the S3 bucket.
 
-####  Prerequisites:
+####  Prerequisites
 1. Basic knowledge of AWS services and concepts.
 2. Familiarity with Terraform and infrastructure as code principles.
 3. An AWS account with appropriate permissions.
 4. An IDE of your Choice , I would suggest VS Code Editor .
 5. This project serves as an excellent foundation for hosting static websites of Football worldcup
 
-####  Steps:
+####  Steps
 ####  Step 1: Set Up Your Development Environment
 Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and providing your AWS access key and secret key.
 
