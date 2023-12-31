@@ -1,9 +1,10 @@
 ## Product Architecture
+<img width="1000" alt="Screenshot 2023-12-31 at 8 12 18 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/3992d23b-f684-4fda-babb-0533d6e918f8">
 
-<img width="720" alt="Screenshot 2023-12-30 at 11 00 13 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/d80d1c93-6f32-4fe5-b151-0c6f9f115725">
 
-#### Expected Result
+## Expected Result
 
+<img width="1000" alt="Screenshot 2023-12-31 at 7 52 03 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/83d15ac9-52c7-41f1-9f82-d2fec5647882">
 
 
 #### Serverless Approach 2
