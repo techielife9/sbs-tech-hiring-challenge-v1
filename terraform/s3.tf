@@ -89,6 +89,7 @@ resource "aws_s3_object" "index_html" {
   key    = "index.html"
   acl    = "public-read"  # To make the object public
   //content_type = "image/jpeg"
+  content_type = "text/html"
   source = "/Users/sujit/sbs-tech-hiring-challenge-v1/terraform/index.html"
   content_disposition = ""  # Set to an empty string
 }
@@ -97,5 +98,8 @@ resource "aws_s3_object" "main_js" {
   bucket  = aws_s3_bucket.my-static-website.id
   key    = "main.js"
   acl    = "public-read"
-  source = "/Users/sujit/sbs-tech-hiring-challenge-v1/terraform/main.js" 
+  content_type = "text/javascript"
+  #source = "/Users/sujit/sbs-tech-hiring-challenge-v1/terraform/main.js" 
+  #content = templatefile("main.tftpl", { api_gw_url = aws_api_gateway_deployment.MyDemoAPIDeployment.invoke_url })
+  content = templatefile("main.tftpl", { api_gw_url = "${aws_api_gateway_deployment.MyDemoAPIDeployment.invoke_url}/${var.api_gw_path_var}" })
 }

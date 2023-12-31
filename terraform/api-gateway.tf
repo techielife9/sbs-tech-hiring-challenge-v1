@@ -1,3 +1,7 @@
+variable "api_gw_path_var" { 
+    type        = string  
+    default     = "{wapi+}"
+    }
 
 resource "aws_api_gateway_rest_api" "MyDemoAPI" {
   name        = "example-api"
@@ -10,7 +14,7 @@ resource "aws_api_gateway_rest_api" "MyDemoAPI" {
 resource "aws_api_gateway_resource" "MyDemoResource" {
   rest_api_id = aws_api_gateway_rest_api.MyDemoAPI.id
   parent_id   = aws_api_gateway_rest_api.MyDemoAPI.root_resource_id
-  path_part   = "{proxy+}"
+  path_part   = var.api_gw_path_var
 }
 
 resource "aws_api_gateway_method" "MyDemoMethod" {
