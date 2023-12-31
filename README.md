@@ -1,6 +1,7 @@
 # SBS TECH HIRING CHALLENGE LAB
 
 ## Product Architecture
+
 <img width="1000" alt="Screenshot 2023-12-31 at 11 06 25 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/33a4272b-78bb-44b8-b2f8-50135eaf1fd7">
 
 
@@ -37,7 +38,7 @@ Using the Lambda function used as a server side script to print the date and int
 API Gateway is to trigger the lambda function.
 
 ####  Content Upload and Management
-Provided instructions and scripts for uploading and managing my website content within the S3 bucket. <br/>
+Provided instructions and scripts for uploading and managing the website content within the S3 bucket. <br/>
  1. index.html <br/>
  2. main.js <br/>
  3. sbs-world-cup.png <br/>
@@ -80,17 +81,17 @@ Running terraform init will install the necessary plugins and modules required f
 
 4. And then define backend.tf, cloudfront.tf, dynamodb_table.tf, s3.tf, lambda.tf file for creating the required infrastructure. <br/>
 
-
 terraform apply -auto-approve
 The code above will apply the necessary configurations for features such as static website hosting, bucket policies, and blocking public access to your bucket, create CDN distribution. <br/>
 
 
+#### Git Operations
+1. Using .gitignore to ignore the *.tfstate, .tfstate. files <br/>
+2. Will only be pushing to main branch once the approver will approve the code. <br/>
+3. Should follow the PR process to merge to main branch.
+
+
 ####  Output
-Below is the Cloudfront and API Gateway URL output after running the terraform apply to access the website.
+Below is the Cloudfront and API Gateway URL output from VS code after running the terraform apply to access the website.
 
 <img width="1000" alt="Screenshot 2023-12-31 at 8 41 59 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/3e8dd082-1f63-4e49-86ca-5c110383fb90">
-
-
-
-
-  
