@@ -1,5 +1,5 @@
 ## Product Architecture
-<img width="1000" alt="Screenshot 2023-12-31 at 8 12 18 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/3992d23b-f684-4fda-babb-0533d6e918f8">
+<img width="1000" alt="Screenshot 2023-12-31 at 11 06 25 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/33a4272b-78bb-44b8-b2f8-50135eaf1fd7">
 
 
 ## Expected Result
@@ -70,12 +70,15 @@ terraform plan <br/>
 terraform apply <br/>
 Running terraform init will install the necessary plugins and modules required for connecting to AWS and managing your infrastructure.<br/>
 
-4. And then define backend.tf, cloudfront.tf, dynamodb_table.tf, s3.tf file for creating the required infra as discussed at the beginning.
+4. And then define backend.tf, cloudfront.tf, dynamodb_table.tf, s3.tf, lambda.tf file for creating the required infrastructure. <br/>
+
 
 terraform apply -auto-approve
 The code above will apply the necessary configurations for features such as static website hosting, bucket policies, and blocking public access to your bucket, create CDN distribution. <br/>
 
-5. Below is cloudfront and api gateway url to access the website
+
+####  Output
+Below is the Cloudfront and API Gateway URL output after running the terraform apply to access the website.
 
 <img width="1000" alt="Screenshot 2023-12-31 at 8 41 59 pm" src="https://github.com/techielife9/sbs-tech-hiring-challenge-v1/assets/29218570/3e8dd082-1f63-4e49-86ca-5c110383fb90">
 
