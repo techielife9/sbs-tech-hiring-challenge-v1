@@ -10,7 +10,7 @@ resource "aws_api_gateway_rest_api" "MyDemoAPI" {
 resource "aws_api_gateway_resource" "MyDemoResource" {
   rest_api_id = aws_api_gateway_rest_api.MyDemoAPI.id
   parent_id   = aws_api_gateway_rest_api.MyDemoAPI.root_resource_id
-  path_part   = "image"
+  path_part   = "{proxy+}"
 }
 
 resource "aws_api_gateway_method" "MyDemoMethod" {
@@ -35,14 +35,14 @@ resource "aws_api_gateway_method_response" "response_200" {
   http_method = aws_api_gateway_method.MyDemoMethod.http_method
   status_code = "200"
 }
-/*
+
 resource "aws_api_gateway_integration_response" "MyDemoIntegrationResponse" {
   rest_api_id = aws_api_gateway_rest_api.MyDemoAPI.id
   resource_id = aws_api_gateway_resource.MyDemoResource.id
   http_method = aws_api_gateway_method.MyDemoMethod.http_method
   status_code = aws_api_gateway_method_response.response_200.status_code
 }
-*/
+
 
 resource "aws_lambda_permission" "example_lambda_permission" {
   statement_id  = "AllowAPIGatewayInvoke"
@@ -55,8 +55,8 @@ resource "aws_lambda_permission" "example_lambda_permission" {
 
 
 resource "aws_api_gateway_deployment" "MyDemoAPIDeployment" {
-  #depends_on    = [aws_api_gateway_integration.MyDemoIntegration, aws_api_gateway_integration_response.MyDemoIntegrationResponse]
-  depends_on    = [aws_api_gateway_integration.MyDemoIntegration]
+  depends_on    = [aws_api_gateway_integration.MyDemoIntegration, aws_api_gateway_integration_response.MyDemoIntegrationResponse]
+  #depends_on    = [aws_api_gateway_integration.MyDemoIntegration]
   rest_api_id   = aws_api_gateway_rest_api.MyDemoAPI.id
   stage_name    = "prod"
 }
